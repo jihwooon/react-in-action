@@ -11,6 +11,11 @@ app/out/
 # Ignore Gradle build output directory
 build
 
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
 # VS Code
 .vscode
 
@@ -25,3 +30,13 @@ Thumbs.db
 Thumbs.db:encryptable
 ehthumbs.db
 ehthumbs_vista.db
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# testing
+/coverage
+
+# production
+/build
