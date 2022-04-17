@@ -26,13 +26,6 @@ const App = () => {
     },
   ];
 
-  // return React.createElement(
-  //     'div',
-  //     {},
-  //     React.createElement('h2', {}, "Hello React!"),
-  //     React.createElement(Expenses, { items: expenses })
-  // );
-
   return (
       <div className="App">
         <h2>Hello React!</h2>
