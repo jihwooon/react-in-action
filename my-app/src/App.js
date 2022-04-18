@@ -1,4 +1,6 @@
 import React from "react";
+
+import NewExpense from "./componesnts/NewExpense/NewExpense";
 import Expenses from "./componesnts/Expenses/Expenses";
 
 const App = () => {
@@ -24,16 +26,14 @@ const App = () => {
     },
   ];
 
-  // return React.createElement(
-  //     'div',
-  //     {},
-  //     React.createElement('h2', {}, "Hello React!"),
-  //     React.createElement(Expenses, { items: expenses })
-  // );
+  const addExpenseHandler = expenses => {
+    console.log('In App.js');
+    console.log(expenses);
+  }
 
   return (
       <div className="App">
-        <h2>Hello React!</h2>
+        <NewExpense onAddExpense={addExpenseHandler}/>
         <Expenses items={expenses}/>
       </div>
   );
