@@ -1,6 +1,19 @@
-//리액트에 있는 컴포넌트는 단지 자바스크립트 함수일 뿐입니다.
+import './ExpenseItem.css';
+
 function ExpenseItem() {
-  return<h2>Expense item!</h2>
+  const expenseDate = new Date(2021,2,28);
+  const expenseTitle = 'Car Insurance';
+  const expenseAmount = 294.67;
+
+  return (
+      <div className="expense-item">
+        <div>{expenseDate.toString()}</div>
+        <div className="expense-item__description">
+          <h2>{expenseTitle}</h2>
+          <div className="expense-item__price">${expenseAmount}</div>
+        </div>
+      </div>
+  );
 }
 
 export default ExpenseItem;
