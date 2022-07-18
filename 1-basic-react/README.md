@@ -39,16 +39,56 @@ npm start
     └── index.js   
 ```
 
-
 ## 2. 컴포넌트란 무엇인가? 리액트는 컴포넌트의 전부라고 하는가?
 
 
 
 ## 3. JSX는 무엇인가?
 
+`HTML in JavaScript` 자바스크립트 안에 Html 코드를 의미합니다.  
+결국 jsx는 자바스크립트의 xml을 뜻하기도 합니다.  
+JSX 구문을 사용하면 브라우저에서는 지원하지 않지만 브라우저에서 작동하는 코드로 변환 될 것입니다.
+
 
 ## 4. 리액트 동작 방식
 
+
+## 5. 컴포지션(Composition)의 개념
+
+컴포지션을 사용하는 이유는 `컴포넌트 간에 코드를 재사용`하는 것이 좋습니다.  
+자주 쓰이는 범용적인 Box 형태의 컴포넌트를 childern prop으로 전달을 합니다.  
+
+```javascript
+function Card(props) {
+  const classes = 'card ' + props.className;
+
+  return <div className={classes}>{props.children}</div>;
+}
+
+export default Card;
+```
+
+```javascript
+function ExpenseItem(props) {
+  return (
+      <Card className="expense-item">
+        <ExpenseDate date = {props.date}/>
+        <div className="expense-item__description">
+          <h2>{props.title}</h2>
+          <div className="expense-item__price">${props.amount}</div>
+        </div>
+      </Card>
+  );
+}
+```
+
+컴포넌트 간의 코드를 재사용을 하기 위해서는 `합성` 사용 할 수 있습니다.  
+합성에서 중요한 부분은 `props.children`으로 래퍼 컴포넌트르 생성하게 하며 특별한 컴포넌트 입니다. 
+
+### conclude
+복잡한 JSX구조를 가진 좀 더 복잡한 중복 코드를 추출하여 수많은 코드 중복을 피할 수 있게 해주고 다른 컴포넌트를 깔끔하게 유지할 수 있게 해줍니다.
+
+* [합성 (Composition) vs 상속 (Inheritance)](https://ko.reactjs.org/docs/composition-vs-inheritance.html)
 
 
 
