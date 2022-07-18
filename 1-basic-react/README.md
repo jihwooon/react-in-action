@@ -28,20 +28,38 @@ npm start
 │   └── manifest.json
 └── src
     ├──components
-    │   ├──ExpenseDate.css
-    │   ├──ExpenseDate.js
-    │   ├──ExpenseItem.css
-    │   ├──ExpenseItem.js
-    │   ├──Expenses.css
-    │   └──Expenses.js
+    │   ├──Expenses
+    │   │    ├──ExpenseDate.css
+    │   │    ├──ExpenseDate.js
+    │   │    ├──ExpenseItem.css
+    │   │    ├──ExpenseItem.js
+    │   │    ├──Expenses.css
+    │   │    └──Expenses.js
+    │   └──UI
+    │      ├──Card.css
+    │      └──Card.js
     ├── App.js
     ├── index.css
     └── index.js   
 ```
 
 ## 2. 컴포넌트란 무엇인가? 리액트는 컴포넌트의 전부라고 하는가?
+리액트는 복잡한 사용자 인터페이스 작업을 훨씬 더 수월하게 해줍니다.  
+응용 프로그램을 구성하는 핵심 비즈니스 로직에 집중 할 수 있게 합니다.  
+어떤 일이 발생 했을 #때 페이지를 업데이트 하는 작업들에 집중을 대신 합니다.
+이러한 이유가 리액트 라이브러리를 사용하는 이유 중 하나입니다.
 
+리액트는 `컴포넌트` 라는 개념을 받아 들였습니다. 리액트에는 컴포넌트가 전부입니다.
+그 이유는 무엇일까요? 모든 사용자 인터페이스들은 결국 컴포넌트로 구성이 되어 있습니다.
+우리가 보는 모든 사용자 인터페이스에서 중요한 것입니다. 사용자 인터페이스에서 재사용할 수 있는 블럭을 생성합니다.
+결국 컴포넌트는 html 코드와 css 코드 그리고 자바스크립트의 결합 입니다.
 
+리액트가 컴포넌트 개념을 도입한 것은 재사용성, 관심사 분리를 할수 있도록 해주기 때문입니다.
+
+이 개념을 받아들인 이유로 커다란 파일 대신 각각의 컴포넌트 하나의 명확환 과제 초점에만 집중 할 수 있습니다.
+
+리액트는 함수의 개념을 가져와 여러 함수로 코드를 분리하고 프론트엔드 웹 응용프로그램을 위한 코드를 해석합니다.
+코드를 여러 개의 컴포넌트로 나누어서 우리가 필요할 때 짜 맞춰서 전체 사용자 인터페이스를 구축하는 할 수 있습니다.
 
 ## 3. JSX는 무엇인가?
 
@@ -56,7 +74,7 @@ JSX 구문을 사용하면 브라우저에서는 지원하지 않지만 브라�
 ## 5. 컴포지션(Composition)의 개념
 
 컴포지션을 사용하는 이유는 `컴포넌트 간에 코드를 재사용`하는 것이 좋습니다.  
-자주 쓰이는 범용적인 Box 형태의 컴포넌트를 childern prop으로 전달을 합니다.  
+자주 쓰이는 범용적인 Box 형태의 컴포넌트를 `childern prop`으로 전달을 합니다.  
 
 ```javascript
 function Card(props) {
@@ -85,7 +103,6 @@ function ExpenseItem(props) {
 컴포넌트 간의 코드를 재사용을 하기 위해서는 `합성` 사용 할 수 있습니다.  
 합성에서 중요한 부분은 `props.children`으로 래퍼 컴포넌트르 생성하게 하며 특별한 컴포넌트 입니다. 
 
-### conclude
 복잡한 JSX구조를 가진 좀 더 복잡한 중복 코드를 추출하여 수많은 코드 중복을 피할 수 있게 해주고 다른 컴포넌트를 깔끔하게 유지할 수 있게 해줍니다.
 
 * [합성 (Composition) vs 상속 (Inheritance)](https://ko.reactjs.org/docs/composition-vs-inheritance.html)
