@@ -78,6 +78,8 @@ HTML 문서를 이루는 엘리먼트 브라우저가 HTML 문서를 읽어 들�
 리액트에는 가상의 돔(Virtual Dom)을 생성하고 브라우저가 렌더링하도록 하는 방식을 따릅니다.
 
 <img src = "https://user-images.githubusercontent.com/68071599/179643131-4fa4feb0-3ef1-4298-be3a-9627f43664af.JPG" width="300" height="200"/>
+<img src = "https://user-images.githubusercontent.com/68071599/179644494-3f0e4af2-7a18-40d0-b432-aeb9924fc317.JPG" width="300" height="200"/>
+<img src = "https://user-images.githubusercontent.com/68071599/179644502-84b7b935-354a-49ca-ba20-372e83a827a3.JPG" width="300" height="200"/>
 
 
 ## 5. 컴포지션(Composition)의 개념
