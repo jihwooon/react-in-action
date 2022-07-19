@@ -1,17 +1,16 @@
-//Todo : 컴포넌트 기능이 실행 되는 방법
-//Todo : State 와 함께 일하기
 //Todo : useState 훅 자세히 살펴보기
 //Todo : 양식 입력 추가하기
+import React, {useState} from "react";
 import ExpenseDate from './ExpenseDate';
 import './ExpenseItem.css';
 import Card from "../UI/Card";
 
 const ExpenseItem = (props) => {
 
-  let title = props.title;
+  const [title, setTitle] = useState(props.title);
 
   const clickHandler = () => {
-    title = 'Updated!';
+    setTitle('Updated!');
     console.log(title)
   }
 

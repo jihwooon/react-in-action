@@ -1,9 +1,8 @@
 # React Start
 
-## React state 정적 상태를 동적인 상태로 변환 하는 것이다.
-
-state 상태에 따라 값이 변합니다.
-state 하는 이유는 어떤 이벤트에 발생 했을 때 그 이벤트가 상태 변화를 할 수 있습니다.
+### 목표 (Goals)
+이번 목표는 리액트 중 state에 대해서 공부합니다.  
+리액트에서 state는 상태가 변경되면, 컴포넌트는 리렌더링됩니다.
 
 ## 이벤트 리스닝과 이벤트 핸들러
 
@@ -60,3 +59,18 @@ JSX 코드 안에 있는 컴포너트를 이용해서 리액트가 우리의 컴
 그래서 리액트에 어떤 것이 변경이 되었을 때 특정 컴포넌트는 재평가 해야 합니다.
 
 리액트에서 state 개념을 도입합니다.
+
+## useState은 무엇인가요?
+
+useState은 컴포넌트 함수가 다시 호출된 값을 반영하기 위해 `state`로 값을 정의할 수 있게 해주는 함수 입니다.
+React 라이브러를 호출합니다. 라이브러리 안에 `{useState}`를 추가 해줍니다.  
+useState를 어디에 사용하면 될까요? 리액트 컴포넌트 함수 안에 호출해야 합니다.
+
+useState(프로퍼티.값)을 입력하고 setTitle을 등록하면 상태가 변화 되는 것을 볼 수 있습니다.
+
+
+## 요약 (Summary)
+
+
+## reference
+* [State and Lifecycle](https://ko.reactjs.org/docs/state-and-lifecycle.html)
