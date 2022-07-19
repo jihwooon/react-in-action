@@ -77,7 +77,7 @@ JSX 구문을 사용하면 브라우저에서는 지원하지 않지만 브라�
 HTML 문서를 이루는 엘리먼트 브라우저가 HTML 문서를 읽어 들이면서 DOM 엘리먼트 되고, 이 DOM이 화면 인터페이스를 표시합니다.
 리액트에는 가상의 돔(Virtual Dom)을 생성하고 브라우저가 렌더링하도록 하는 방식을 따릅니다.
 
-![Virutal DOM 2](https://user-images.githubusercontent.com/68071599/179643131-4fa4feb0-3ef1-4298-be3a-9627f43664af.JPG)
+<img src = "https://user-images.githubusercontent.com/68071599/179643131-4fa4feb0-3ef1-4298-be3a-9627f43664af.JPG" width="300" height="200"/>
 
 
 ## 5. 컴포지션(Composition)의 개념
