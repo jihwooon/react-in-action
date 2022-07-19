@@ -63,7 +63,7 @@ JSX 코드 안에 있는 컴포너트를 이용해서 리액트가 우리의 컴
 ## useState은 무엇인가요?
 
 useState은 컴포넌트 함수가 다시 호출된 값을 반영하기 위해 `state`로 값을 정의할 수 있게 해주는 함수 입니다.
-React 라이브러를 호출합니다. 라이브러리 안에 `{useState}`를 추가 해줍니다.  
+React 라이브러리를 호출합니다. 라이브러리 안에 `{useState}`를 추가 해줍니다.  
 useState를 어디에 사용하면 될까요? 리액트 컴포넌트 함수 안에 호출해야 합니다.
 ```javascript
 const ExpenseItem = (props) => {
