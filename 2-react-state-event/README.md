@@ -65,8 +65,38 @@ JSX 코드 안에 있는 컴포너트를 이용해서 리액트가 우리의 컴
 useState은 컴포넌트 함수가 다시 호출된 값을 반영하기 위해 `state`로 값을 정의할 수 있게 해주는 함수 입니다.
 React 라이브러를 호출합니다. 라이브러리 안에 `{useState}`를 추가 해줍니다.  
 useState를 어디에 사용하면 될까요? 리액트 컴포넌트 함수 안에 호출해야 합니다.
+```javascript
+const ExpenseItem = (props) => {
 
-useState(프로퍼티.값)을 입력하고 setTitle을 등록하면 상태가 변화 되는 것을 볼 수 있습니다.
+  const [title, setTitle] = useState(props.title);
+
+  const clickHandler = () => {
+    setTitle('Updated!');
+    console.log(title)
+  }
+
+  return (
+      <Card className="expense-item">
+        <ExpenseDate date={props.date}/>
+        <div className="expense-item__description">
+          <h2>{title}</h2>
+          <div className="expense-item__price">${props.amount}</div>
+        </div>
+        <button onClick={clickHandler}>Change Title
+        </button>
+      </Card>
+  );
+}
+
+export default ExpenseItem;
+```
+`const [title, setTitle] = useState(props.title)` 에서 useState(props.title)을 입력하고 setTitle을 등록하면 상태가 변화 되는 것을 볼 수 있습니다.
+
+
+* [useState](https://reactjs.org/docs/hooks-reference.html#usestate)
+  
+
+
 
 
 ## 요약 (Summary)
