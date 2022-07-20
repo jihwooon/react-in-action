@@ -14,7 +14,7 @@ const ExpenseItem = (props) => {
   }
 
   const changeHandler = () => {
-    setAmount('$200,00')
+    setAmount('200,00')
   }
 
   return (
