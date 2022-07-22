@@ -1,9 +1,7 @@
-//TODO : 양방향 바인딩
 import React, {useState} from 'react';
 import './ExpenseForm.css'
 
-const ExpenseForm = () => {
-
+const ExpenseForm = (props) => {
   const [enterTitle, setEnterTitle] = useState('');
   const [enterAmount, setEnterAmount] = useState('');
   const [enterDate, setEnterDate] = useState('');
@@ -35,7 +33,7 @@ const ExpenseForm = () => {
       date: new Date(enterDate)
     }
 
-    console.log(expenseDate)
+    props.onSaveExpenseData();
     setEnterTitle('');
     setEnterAmount('');
     setEnterDate('');
@@ -45,25 +43,28 @@ const ExpenseForm = () => {
     <div className='new-expense__controls'>
       <div className='new-expense__control'>
         <label>Title</label>
-        <input type='text'
-               value={enterTitle || ''}
-               onChange={titleChangeHandler}/>
+          <input type='text'
+                 value={enterTitle || ''}
+                 onChange={titleChangeHandler}
+          />
       </div>
       <div className='new-expense__control'>
         <label>Amount</label>
-        <input type='number'
-               min="0.01"
-               step="0.01"
-               value={enterAmount || ''}
-               onChange={amountChangeHandler}/>
+          <input type='number'
+                 min="0.01"
+                 step="0.01"
+                 value={enterAmount || ''}
+                 onChange={amountChangeHandler}
+          />
       </div>
       <div className='new-expense__control'>
         <label>Date</label>
-        <input type='date'
-               min="2019-01-01"
-               max="2022-12-31"
-               value={enterDate || ''}
-               onChange={dateChangeHandler}/>
+          <input type='date'
+                 min="2019-01-01"
+                 max="2022-12-31"
+                 value={enterDate || ''}
+                 onChange={dateChangeHandler}
+          />
       </div>
       <div className='new-expense__actions'>
         <button type='submit'>App Expense</button>

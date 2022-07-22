@@ -9,9 +9,14 @@ const App = () => {
     {id: 'e4', title: 'Paper Company', amount: 100.12, date: new Date(2022, 3, 20)}
   ];
 
+  const addExpenseHandler = expenses => {
+    console.log('In App.js')
+    console.log(expenses)
+  }
+
   return (
       <div>
-        <NewExpense/>
+        <NewExpense onAddExpense = {addExpenseHandler}/>
         <Expenses items={expenses}/>
       </div>
   );
