@@ -21,7 +21,6 @@ const App = () => {
   };
 
   return (
-
       <div>
         <NewExpense onAddExpense={addExpenseHandler}/>
         <Expenses items={DUMMY_EXPENSES}/>
