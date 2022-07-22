@@ -1,4 +1,4 @@
-# React Start
+# 리액트 State 및 이벤트 다루기
 
 ### 목표 (Goals)
 이번 목표는 리액트 중 state에 대해서 공부합니다.  
